@@ -4,36 +4,49 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Sisesta esimene number: ");
-            float num1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Sisesta esimene number");
+            //loeme kasutaja sisendit ja teisendame selle float tüübiks
+            float firstNumber = float.Parse(Console.ReadLine());
 
-            Console.Write("Vali tehe (+, -, *, /): ");
-            string tehe = Console.ReadLine();
+            //konsool kirjutab kasutajale, et vali tehe: +, -, *, /
+            Console.WriteLine("Vali tehe: +, -, *, /");
+            string operation = Console.ReadLine();
 
-            Console.Write("Sisesta teine number: ");
-            float num2 = float.Parse(Console.ReadLine());
+            //konsool kirjutab, et sisesta teine number ja teisendame selle float tüübiks
+            Console.WriteLine("Sisesta teine number");
+            float secondNumber = float.Parse(Console.ReadLine());
 
-            float tulemus = 0;
+            //teeme switch lausega tehte valiku
 
-            switch (tehe)
+            switch (operation)
             {
                 case "+":
-                    tulemus = num1 + num2;
+                    Console.WriteLine($"Tulemus: {firstNumber + secondNumber}");
                     break;
-                
+
                 case "-":
-                    tulemus = num1 - num2;
+                    Console.WriteLine($"Tulemus: {firstNumber - secondNumber}");
                     break;
-                
+
                 case "*":
-                    tulemus = num1 * num2;
+                    Console.WriteLine($"Tulemus: {firstNumber * secondNumber}");
                     break;
-                
+
                 case "/":
-                    tulemus = num1 / num2;
+                    if (secondNumber == 0)
+                    {
+                        Console.WriteLine("Nulliga jagamine ei ole lubatud!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Tulemus: {firstNumber / secondNumber}");
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Tundmatu tehe!");
                     break;
             }
-            Console.WriteLine("Tulemus: " + tulemus);
         }
     }
 }
