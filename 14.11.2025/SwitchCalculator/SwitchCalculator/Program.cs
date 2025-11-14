@@ -4,16 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sisesta esimene number");
+            Console.WriteLine("Sisesta esimene number:");
             //loeme kasutaja sisendit ja teisendame selle float tüübiks
             float firstNumber = float.Parse(Console.ReadLine());
 
             //konsool kirjutab kasutajale, et vali tehe: +, -, *, /
-            Console.WriteLine("Vali tehe: +, -, *, /");
+            Console.WriteLine("Vali tehe: (+, -, *, /) ");
             string operation = Console.ReadLine();
 
             //konsool kirjutab, et sisesta teine number ja teisendame selle float tüübiks
-            Console.WriteLine("Sisesta teine number");
+            Console.WriteLine("Sisesta teine number:");
             float secondNumber = float.Parse(Console.ReadLine());
 
             //teeme switch lausega tehte valiku
