@@ -6,13 +6,15 @@
         {
             Console.WriteLine("While Do");
 
-            int number = 1;
+            int i = 1;
 
             do
             {
-                Console.WriteLine(number);
-                number++;
-            } while (number <= 5);     
+                Console.WriteLine(i);
+                //suurendab numbrit ühe võrra e number + 1
+                i++;
+                //kui number on väiksem või võrdne 5-ga siis jätkab tsüklit
+            } while (i <= 5);     
         }
     }
 }
