@@ -45,7 +45,7 @@ namespace DigitalClock
 
             //for loopiga digitaalne kell
 
-            for (; ; )
+            for ( ; ; )
             {
                 Console.Clear();
                 Console.WriteLine("Digital Clock\n");
